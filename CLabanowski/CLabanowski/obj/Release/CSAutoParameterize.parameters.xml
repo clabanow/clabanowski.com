@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CLabanowskiContext-Web.config Connection String" description="CLabanowskiContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:eq4vip2t8g.database.windows.net;Initial Catalog=charleslabanowskiDB;User ID=charles.labanowski;Password=Pedrocalunqsod44" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Charles\\Desktop\\Github\\Charles\\clabanowski\.com\\CLabanowski\\CLabanowski\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CLabanowskiContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Charles Labanowski";
+    ViewBag.Description = "The personal website of Charles Labanowski. Includes blog posts, portfolio of work, and various links to his work on websites such as Github.";
+}
+
+<div id="indexContent">
+    <div id="indexName">
+        <span id="charles">charles</span>
+        <span id="labanowski">labanowski</span>
+    </div>
+    <div id="indexLinks">
+        <div class="indexLink">@Html.ActionLink("blog", "Index", "Blog")</div>
+        <div class="indexLink">@Html.ActionLink("portfolio", "Index", "Portfolio")</div>
+        <div class="indexLink"><a href="http://www.github.com">github</a></div>
+        <div class="indexLink"><a href="http://linkedin.com/pub/charles-labanowski/1a/844/a54">linkedin</a></div>
+        <div class="indexLink"><a href="mailto:charles.labanowski@alumni.stanford.edu">email</a></div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/fittext/fittext.js"></script>
+    <script>
+        $("#indexName").fitText(.76);
+    </script>
+}
+

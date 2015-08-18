@@ -1,0 +1,33 @@
+﻿@model CLabanowski.Models.Admin.Portfolio.AdminPortfolioVM
+
+@{
+    ViewBag.Title = "Portfolio";
+}
+
+<div class="sectionIndexContainer">
+    <div class="pageHeaderText">Porfolio Projects</div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action <a href="@Url.Action("AddOrEditPortfolio", "Admin")"><i class="glyphicon glyphicon-plus-sign"></i></a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model.Projects)
+            {
+                <tr>
+                    <td>@project.Title</td>
+                    <td>
+                        <a href="@Url.Action("AddOrEditPortfolio", new { id = @project.Id })">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                        <a href="@Url.Action("DeletePortfolioProject", "Admin")"><i class="glyphicon glyphicon-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,474 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#headerLine {
+    background-color: #006485;
+    height: 4px;
+}
+
+/*STICKY FOOTER*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+    #main {
+        overflow: auto;
+        padding-bottom: 70px;
+    }
+
+    #footer {
+        position: relative;
+        margin-top: -70px;
+        height: 70px;
+        clear: both;
+    }
+
+/*Color and Font Palette*/
+
+/*background*/
+body {
+    background-color: whitesmoke;
+}
+div.indexLink a {
+    border: 3px solid whitesmoke;
+}
+/*footer*/
+#footer {
+    background-color: #d1e0e0;
+}
+/*home page header*/
+#charles {
+    color: #0099cc;
+    font-family: 'Fjalla One', sans-serif;
+}
+#labanowski {
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+}
+#homeButton:hover {
+    background-color: #ffb400;
+}
+
+div.indexLink a {
+    color: #ff2800;
+    font-family: 'Average', sans-serif;
+}
+
+div.indexLink a:hover {
+    transition: border 1.5s ease;
+    text-decoration: none;
+    border: 3px solid black;
+}
+/*all page headers*/
+.pageHeaderText {
+    color: #a61a00;
+    font-family: 'Average', sans-serif;
+}
+
+.blogPostTitle {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.blogPostTitle a:hover {
+    text-decoration: none;
+    color: #006485;
+}
+
+/*Portfolio Page*/
+.projectTitle a {
+    color: #006485;
+    font-family: 'Fjalla One', sans-serif;
+}
+.projectTech {
+    background-color: #ff5d40;
+    color: white;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+#footer {
+    border-top: 1px dashed darkgray;
+}
+
+    #footerLinksWrapper {
+        display: flex;
+        width: 40%;
+        margin: 20px auto;
+    }
+
+        #footerLinksWrapper a {
+            margin: auto;
+            display: inline-block;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+        }
+
+        #footerLinksWrapper a:hover {
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+            cursor: pointer;
+        }
+
+/*SHARED LAYOUT*/
+
+#homeButton {
+    width: 30px;
+    height: 30px;
+    padding: 3px 5px;
+    margin: 15px auto;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+    #homeButton a img {
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        vertical-align: middle;
+    }
+
+    #homeButton:hover {
+        cursor: pointer;
+    }
+
+/*HOME/INDEX*/
+
+#indexContent {
+    margin: 15% auto;
+    width: 43.81%;
+}
+
+    #indexName {
+        border-bottom: 1px dashed darkgray;
+    }
+
+        
+    #indexLinks {
+        margin-top: 15px;
+        display: flex;
+        height: 1.5em;
+        padding-right: 15px;
+    }
+
+        .indexLink {
+            height: 1.5em;
+            margin: auto;
+            font-size: 2em;
+            display: inline-block;
+        }
+
+            div.indexLink a {
+                padding: 4px;
+            }
+
+/*BLOG/INDEX*/
+
+.sectionIndexContainer {
+    width: 50%;
+    margin: 30px auto;
+}
+
+    .pageHeaderText {
+        margin: 0 auto 20px auto;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+        #blogHeader {
+            width: 94px;
+        }
+
+    .blogPostContainer {
+        margin-bottom: 30px;
+    }
+
+        .blogPostContainer:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .blogPostDate {
+            color: darkgray;
+            font-size: 1em;
+        }
+
+        div.blogPostTitle {
+            margin-bottom: 5px;
+        }
+
+            .blogPostTitle a {
+                color: black;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+
+            
+        .blogPostText {
+            font-size: 1.2em;
+            font-family: 'Roboto', sans-serif;
+        }
+
+.newer-btn {
+    float: right;
+}
+
+/*BLOG/BLOG*/
+
+.blogPostTitle {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+    .articleTitle {
+        font-size: 2em;
+    }
+
+/*ADD EDIT BLOG/PORTFOLIO*/
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group > div {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+.actionRow a:hover {
+    text-decoration: none;
+}
+
+.field-validation-error {
+    background-color: red;
+    color: whitesmoke;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/*EDIT PORTFOLIO PROJECT*/
+
+.form-group label {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.portfolioInput {
+    width: 200px;
+    margin-right: 15px;
+}
+
+/*/PORTFOLIO/INDEX*/
+
+.projectContainer {
+    margin-bottom: 30px;
+    border: 1px solid grey;
+    padding: 15px 15px 5px 15px;
+    background-color: white;
+}
+
+    #portfolioHeader {
+        width: 175px;
+    }
+
+    .projectContainer:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .projectTitle {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+        .projectTitle a:hover {
+            text-decoration: none;
+        }
+
+    .projectImgAndDesc img {
+        height: 140px;
+        width: 140px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+    }
+
+        .projectDesc {
+            display: inline-block;
+            margin-left: 20px;
+            width: 70%;
+            vertical-align: top;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .projectTechList {
+            vertical-align: bottom;
+            margin-top: 10px;
+        }
+
+            .projectTech {
+                display: inline-block;
+                margin-right: 8px;
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+
+/*AUTH/LOGIN*/
+
+#login {
+    display: inline-block;
+    margin: 40px auto;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 1150px) {
+    .sectionIndexContainer {
+        width: 70%;
+    }
+
+    .indexLink {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    .indexLink {
+        font-size: 1.2em;
+    }
+
+    .blogPostDate {
+        font-size: 1em;
+    }
+
+    div.blogPostTitle {
+        font-size: 12px;
+    }
+            
+    .blogPostText {
+        font-size: 1em;
+    }
+
+        .projectDesc {
+            width: 60%;
+            font-size: 13px;
+        }
+
+        .projectTechList {
+            vertical-align: bottom;
+            margin-top: 10px;
+        }
+
+            .projectTech {
+                display: inline-block;
+                margin-right: 8px;
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+}
+
+@media (max-width: 750px) {
+    .sectionIndexContainer {
+        margin-top: 15px;
+    }
+
+    #indexContent {
+        margin: 10% auto;
+    }
+
+    #indexLinks {
+        display: table;
+        margin-top: 0;
+        width: 100%;
+        padding-top: 8px;
+    }
+
+    .indexLink {
+        display: table-row;
+    }
+
+    div.indexLink a {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1.5em;
+        padding: 0;
+    }
+
+        div.indexLink a:hover {
+            border: 0;
+        }
+
+        div.indexLink a {
+            border: 0;
+        }
+
+    #main {
+        padding-bottom: 60px;
+    }
+
+    #footer {
+        margin-top: -60px;
+        height: 60px;
+    }
+
+    #footerLinksWrapper a img{
+        height: 20px;
+        width: 20px;
+    }
+
+    div.projectTech {
+        font-size: 12px;
+    }
+
+    .projectTitle {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .projectDesc {
+        width: 45%;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 550px) {
+    .projectDesc {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    div.indexLink a {
+        font-size: 1.2em;
+    }
+
+    
+}

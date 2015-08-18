@@ -1,0 +1,11 @@
+﻿@model CLabanowski.Models.Blog.Blog.BlogBlogVM
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<div class="sectionIndexContainer">
+    <div class="blogPostDate">@Model.Date</div>
+    <div class="blogPostTitle articleTitle">@Model.Title</div>
+    <div class="blogPostText">@Html.Raw(Model.Text)</div>
+</div>

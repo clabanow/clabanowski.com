@@ -1,0 +1,50 @@
+﻿@model CLabanowski.Models.Admin.Portfolio.AdminPortfolioFull
+
+@{
+    ViewBag.Title = "AddOrEditPortfolio";
+}
+
+<div class="sectionIndexContainer">
+    <div class="pageHeaderText">Add Or Edit Portfolio</div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>ID</label>
+            @Html.TextBoxFor(m => m.Id, new { @class = "portfolioInput"})
+            @Html.ValidationMessageFor(m => m.Id)
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "portfolioInput" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+
+        <div class="form-group">
+            <label>Technologies</label>
+            @Html.TextAreaFor(m => m.Technologies, new { @class = "portfolioInput" })
+            @Html.ValidationMessageFor(m => m.Technologies)
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            @Html.TextAreaFor(m => m.Description, new { @class = "portfolioInput" })
+            @Html.ValidationMessageFor(m => m.Description)
+        </div>
+
+        <div class="form-group">
+            <label>Link to Website</label>
+            @Html.TextBoxFor(m => m.LinkUrl, new { @class = "portfolioInput" })
+            @Html.ValidationMessageFor(m => m.LinkUrl)
+        </div>
+
+        <div class="form-group">
+            <label>Image URL</label>
+            @Html.TextBoxFor(m => m.ImgUrl, new { @class = "portfolioInput" })
+            @Html.ValidationMessageFor(m => m.ImgUrl)
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+</div>

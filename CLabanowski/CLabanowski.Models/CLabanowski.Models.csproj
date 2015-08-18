@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBE3EEB9-222D-44C2-B444-94F8E7723D07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLabanowski.Models</RootNamespace>
+    <AssemblyName>CLabanowski.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\CLabanowskiContext.cs" />
+    <Compile Include="Entities\BlogPost.cs" />
+    <Compile Include="Entities\PortfolioProject.cs" />
+    <Compile Include="Interfaces\IBlogPostRepository.cs" />
+    <Compile Include="Interfaces\IPortfolioProjectRepository.cs" />
+    <Compile Include="Migrations\201405082213507_security.cs" />
+    <Compile Include="Migrations\201405082213507_security.Designer.cs">
+      <DependentUpon>201405082213507_security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405082225123_addUser.cs" />
+    <Compile Include="Migrations\201405082225123_addUser.Designer.cs">
+      <DependentUpon>201405082225123_addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405082250238_lotsOfDeleting.cs" />
+    <Compile Include="Migrations\201405082250238_lotsOfDeleting.Designer.cs">
+      <DependentUpon>201405082250238_lotsOfDeleting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405082301311_addIdentityUserToModel.cs" />
+    <Compile Include="Migrations\201405082301311_addIdentityUserToModel.Designer.cs">
+      <DependentUpon>201405082301311_addIdentityUserToModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EFBlogPostRepository.cs" />
+    <Compile Include="Repositories\EFPortfolioProjectRepository.cs" />
+    <Compile Include="Repositories\MockBlogPostRepository.cs" />
+    <Compile Include="Repositories\MockPortfolioProjectRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405082213507_security.resx">
+      <DependentUpon>201405082213507_security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405082225123_addUser.resx">
+      <DependentUpon>201405082225123_addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405082250238_lotsOfDeleting.resx">
+      <DependentUpon>201405082250238_lotsOfDeleting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405082301311_addIdentityUserToModel.resx">
+      <DependentUpon>201405082301311_addIdentityUserToModel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

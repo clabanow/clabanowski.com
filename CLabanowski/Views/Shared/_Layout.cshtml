@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="description" content=@ViewBag.Description />
+    <link rel="shortcut icon" href="http://faviconist.com/icons/2c9fd6bcec47524041891f9709e71191/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <!--decides where the home button send the user based on current location-->
+            @if (HttpContext.Current.Request.Url.AbsolutePath != "/")
+            {
+                if ((string)ViewContext.RouteData.Values["Controller"] == "Blog" && !string.IsNullOrEmpty((string)Url.RequestContext.RouteData.Values["id"]))
+                {
+                    <div id="headerLine"></div>
+                    <div id="homeButton"><a href="/blog"><img src="/Content/icons/home.png" /></a></div>
+                }
+                else
+                {
+                    <div id="headerLine"></div>
+                    <div id="homeButton"><a href="/"><img src="/Content/icons/home.png" /></a></div>
+                }
+            }
+            @RenderBody()
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="footerLinksWrapper">
+            <a href="http://facebook.com"><img src="/Content/icons/facebook.png" /></a>
+            <a href="http://twitter.com"><img src="/Content/icons/twitter.png" /></a>
+            <a href="http://google.com"><img src="/Content/icons/gplus2.png" /></a>
+            <a href="http://email.com"><img src="/Content/icons/email.png" /></a>
+            <a href="http://linkedin.com"><img src="/Content/icons/linkedin.png" /></a>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

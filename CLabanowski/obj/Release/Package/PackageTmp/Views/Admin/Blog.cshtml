@@ -1,0 +1,39 @@
+﻿@model CLabanowski.Models.Admin.Blog.AdminBlogVM
+
+@{
+    ViewBag.Title = "Blog";
+}
+
+<div class="sectionIndexContainer">
+    <div class="pageHeaderText">Blog Posts</div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Title</td>
+                <td>
+                    Action
+                    <a href="@Url.Action("AddOrEditBlogPost", "Admin")">
+                        <i class="glyphicon glyphicon-plus-sign"></i>
+                    </a>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model.BlogPosts)
+            {
+                <tr>
+                    <td>@post.Date</td>
+                    <td>@post.Title</td>
+                    <td class="actionRow">
+                        <a href="@Url.Action("AddOrEditBlogPost", "Admin", new { id = @post.Id })">
+                            <i class="glyphicon glyphicon-pencil"></i>
+                        </a>
+                        <a href="@Url.Action("DeleteBlogPost", "Admin", new { id = @post.Id})"><i class="glyphicon glyphicon-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

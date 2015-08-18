@@ -1,0 +1,32 @@
+﻿@model CLabanowski.Models.Blog.Index.BlogIndexVM
+
+@{
+    ViewBag.Title = "Blogs";
+}
+
+<div class="sectionIndexContainer">
+    <div class="pageHeaderText" id="blogHeader">Blog</div>
+
+    @foreach (var blogPost in Model.Blogs)
+    {
+        <div class="blogPostContainer">
+            <div class="blogPostDate">@blogPost.Date</div>
+            <div class="blogPostTitle"><a href="/blog/@blogPost.RouteName">@blogPost.Title</a></div>
+            <div class="blogPostText">@Html.Raw(blogPost.TrimmedText)</div>
+        </div>
+    }
+
+    @if (Model.HasOlderPages || Model.HasNewerPages)
+    {
+        <div id="buttons">
+            @if (Model.HasOlderPages)
+            {
+                @Html.ActionLink("Older", "Index", new { page = @Model.Page + 1}, new { @class = "btn btn-default older-btn"})
+            }
+            @if (Model.HasNewerPages)
+            {
+                @Html.ActionLink("Newer", "Index", new { page = @Model.Page - 1}, new { @class = "btn btn-default newer-btn"})
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,27 @@
+﻿@model CLabanowski.Models.Portfolio.Index.PortfolioIndexVM
+
+@{
+    ViewBag.Title = "Portfolio";
+}
+
+<div class="sectionIndexContainer">
+    <div class="pageHeaderText" id="portfolioHeader">Portfolio</div>
+
+    @foreach (var project in Model.Projects)
+    {
+        <div class="projectContainer">
+            <div class="projectTitle"><a href="@project.LinkUrl">@project.Name</a></div>
+            <div class="projectImgAndDesc">
+                <img src="@project.ImgUrl" />
+                <div class="projectDesc">@project.Description</div>
+            </div>
+            <div class="projectTechList">
+                @foreach (var technology in project.Technologies.Split(','))
+                {
+                    <div class="projectTech">@technology</div>
+                }
+            </div>
+
+        </div>
+    }
+</div>
